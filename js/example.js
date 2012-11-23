@@ -3,7 +3,7 @@ $(function() {
 		query:"subtitle:walfang",
 		api_key:"[ZEIT_API_KEY_HERE]",
 		endpoint:"content",
-		params:{fields:"subtitle,uri"},
+		params:{fields:"subtitle,href"},
 		limit: 100
 	});
 
@@ -16,7 +16,7 @@ $(function() {
 		for (var i = 0; i < results.length; i++) {
 			var item = results[i];
 
-			$('.result').append('<li>'+ item.subtitle + '</li>');
+			$('.result').append('<li><a href="'+item.href+'">'+ item.subtitle + '</a></li>');
 		} 
 
 	});

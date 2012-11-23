@@ -5,5 +5,3 @@
 
  # To hit Zeit Online API
  http://developer.zeit.de/quickstart/
-
- 
