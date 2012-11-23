@@ -7,13 +7,18 @@ $(function() {
 		limit: 100
 	});
 
+	// show in browser
 	api.retrieve(0, function (data){
-		console.debug("1",data.get_result());
-		api.retrieve(2, function (data){
-			console.debug("2",data.get_result());
-			data.get_result().matches[0].uri.retrieve(0, function(data){
-				console.debug(data.get_result());
-			});
-		});
+		console.debug("1",data.get_result().matches);
+		
+		var results = data.get_result().matches;
+
+		for (var i = 0; i < results.length; i++) {
+			var item = results[i];
+
+			$('.result').append('<li>'+ item.subtitle + '</li>');
+		} 
+
 	});
+
 });
