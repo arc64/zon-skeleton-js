@@ -1,4 +1,4 @@
 zon-skeleton
 ============
 
-Zeit Online Skeleton for API
+Zeit Online Skeleton for API - JS
